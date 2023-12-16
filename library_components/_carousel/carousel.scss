@@ -1,0 +1,230 @@
+/* carousel.scss */
+@use "sass:math";
+// elements styling 
+.roy-carousel{
+  overflow: hidden;
+}
+
+// slides/projects styling can be modified and remade for other needs and purposes 
+
+
+
+
+// spacing
+$base-padding: 0.75rem !default;
+$base-margin: 0.75rem !default;
+
+// borders
+$base-border-thickness: 1px !default;
+$base-border-radius: 20px !default;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1) !default;
+
+// font sizes
+
+$base-font-size: 1rem !default;
+$font-size-xl: $base-font-size * 2 !default;
+.card {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #ddd;
+    box-shadow: $base-box-shadow;
+    border-radius: math.div($base-border-radius,4);
+
+    .card-title {
+        font-size: $font-size-xl;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.carousel-card-center{
+    @extend .card;
+    display: inline-block;
+   
+    text-align: center;
+    > *{
+        margin: 0.8rem auto;
+    }
+.img-circle{
+    border-radius: 50%;
+}
+
+}
+
+
+// project styling 
+.carousel-project-container{
+   height: 22vw;
+   max-height: 340px;
+   min-height: 250px;
+
+   margin: auto;
+   box-sizing: border-box;
+   border-radius: 5px;
+   display: flex!important;
+   align-items: center; 
+   justify-content: center;
+   background-repeat: no-repeat!important;
+   background-size: cover!important;
+}
+
+
+
+// animation styling
+
+
+// next button slide next button slide next button slide next button slide
+
+// xs-sm
+@keyframes slide-next-out {
+0%{transform: translateX(0);}
+100%{transform: translateX(-70vw);  }
+}
+@keyframes slide-next-in {
+0%{transform: translateX(50vw);}
+100%{transform: translateX(0); }
+}
+@keyframes slide-left {
+  0%{transform: translateX(0);}
+  100%{transform: translateX(-26.33vw);}
+}
+
+// md
+@media (min-width:768px){
+
+@keyframes slide-next-out {
+0%{transform: translateX(0);}
+100%{transform: translateX(-50vw );  }
+}
+@keyframes slide-next-in {
+0%{transform: translateX(33vw);}
+100%{transform: translateX( 0); }
+}
+@keyframes slide-left {
+  0%{transform: translateX(0);}
+  100%{transform: translateX(-40vw);}
+}
+}
+
+
+// lg
+@media (min-width:968px){
+
+@keyframes slide-next-out {
+0%{transform: translateX(0);}
+100%{transform: translateX(-33vw );  }
+}
+@keyframes slide-next-in {
+0%{transform: translateX(20vw);}
+100%{transform: translateX(0); }
+}
+@keyframes slide-left {
+  0%{transform: translateX(0);}
+  100%{transform: translateX(-26.33vw);}
+}
+}
+
+
+.slideNextOut{
+  
+  animation: slide-next-out 0.3s ease-out ;
+  animation-fill-mode: forwards;
+}
+
+
+.slideNextIn{
+  animation: slide-next-in 0.3s ease-in ;
+  animation-fill-mode: forwards;
+}
+
+
+
+.slideLeft{
+    animation: slide-left 0.3s ease-in ;
+  animation-fill-mode: forwards;
+}
+
+
+
+
+// prev button slide: prev button slide: prev button slide: prev button slide: prev button slide: prev button slide: 
+
+
+
+// small and mobile screen
+@keyframes slide-prev-Out {
+0%{transform: translateX(0);}
+100%{transform: translateX(70vw); overflow: hidden; }
+}
+@keyframes slide-prev-in {
+0%{transform: translateX(-50vw);}
+100%{transform: translateX(0); }
+}
+@keyframes slide-right {
+  0%{transform: translateX(0);}
+  100%{transform: translateX(26.33vw);}
+}
+
+// md screen
+@media (min-width:768px) {
+  @keyframes slide-prev-Out {
+0%{transform: translateX(0);}
+100%{transform: translateX(50vw); overflow: hidden; }
+}
+@keyframes slide-prev-in {
+0%{transform: translateX(-33vw);}
+100%{transform: translateX(0); }
+}
+@keyframes slide-right {
+  0%{transform: translateX(0);}
+  100%{transform: translateX(40vw);}
+}
+}
+
+
+// large screen 
+@media (min-width:968px) {
+  @keyframes slide-prev-Out {
+0%{transform: translateX(0);}
+100%{transform: translateX(33vw); overflow: hidden; }
+}
+@keyframes slide-prev-in {
+0%{transform: translateX(-20vw);}
+100%{transform: translateX(0); }
+}
+@keyframes slide-right {
+  0%{transform: translateX(0);}
+  100%{transform: translateX(26.33vw);}
+}
+}
+
+
+
+.slidePrevOut{
+  
+  animation: slide-prev-Out 0.3s ease-out ;
+  animation-fill-mode: forwards;
+}
+
+
+.slidePrevIn{
+  animation: slide-prev-in 0.3s ease-in ;
+  animation-fill-mode: forwards;
+}
+
+
+
+.slideRight{
+    animation: slide-right 0.3s ease-in ;
+  animation-fill-mode: forwards;
+}

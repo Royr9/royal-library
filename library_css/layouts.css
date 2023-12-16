@@ -1,0 +1,52 @@
+
+/* grid layouts */
+
+.grid{
+    display: grid;
+}
+
+.grid--2cols{
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+
+/* flex layouts */
+.flex{
+    display: flex;
+}
+
+.flex-inline{
+    display: inline-flex;
+}
+
+.flex--col{
+    flex-direction: column;
+}
+
+.flex--h-center{
+    justify-content: center;
+}
+
+.flex--v-center{
+    align-items: center;
+}
+
+
+.flex--center{
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.flex--space{
+  justify-content: space-between;
+}
+
+.footer-bottom{
+position: absolute;
+  bottom: 0;
+  width: 100%;
+}

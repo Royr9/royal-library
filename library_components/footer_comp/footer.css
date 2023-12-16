@@ -1,0 +1,19 @@
+ footer {
+     text-align: center;
+    position: absolute;
+        bottom: 0;
+        width: 100%;
+ }
+
+
+ footer p.footer-text {
+     font-size: 1.4vw !important;
+     color: white;
+ }
+
+
+/* website styling */
+
+/* .WRootLayout-container footer{
+    position: static;
+} */

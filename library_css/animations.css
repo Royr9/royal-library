@@ -1,0 +1,290 @@
+/***********    animations    *******************   */
+
+/* rotate */
+@keyframes rotate {
+
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.rotate{
+    animation-name: rotate;
+    animation-timing-function: linear;
+}
+
+/* ///// *//* ///// *//* ///// */
+
+@keyframes slideInLeft {
+    from{
+        transform: translateX(-2000px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.slideInLeft{
+    animation-name: slideInLeft;
+}
+
+/* ///// *//* ///// */
+
+@keyframes slideInRight {
+    from{
+        transform: translateX(2000px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.slideInRight{
+    animation-name: slideInRight;
+}
+
+/* ///// *//* ///// */
+
+@keyframes slideInTop {
+    from{
+        transform: translateY(-2000px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+.slideInTop{
+    animation-name: slideInTop;
+}
+
+/* ///// *//* ///// *//* ///// */
+@keyframes slideInBottom {
+    from{
+        transform: translateY(2000px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+.slideInBottom{
+    animation-name: slideInBottom;
+}
+
+
+/* ///// *//* ///// *//* ///// */
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.9;
+    }
+}
+
+
+.appear{
+    animation-name: appear;
+}
+
+@keyframes appear-fast {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.appear-fast{
+    animation-name: appear-fast ;
+    animation-duration: 0.8;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes appearSmooth {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.appear-smooth {
+    animation-name: appearSmooth;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+}
+
+
+/* ///// *//* ///// *//* ///// */
+
+
+/* typing animation */
+/* https://blog.hubspot.com/website/typing-animation-css */
+/* to create this animation we need a div container that has the text element
+ inside, otherwise the animation will look weird */
+
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.anm-typing-container{
+    display: inline-block;
+    margin: 0 auto; 
+
+}
+.anm-typing-container.he{
+    direction: rtl;
+}
+
+
+.anm-typing{
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation-delay: 1s;
+    animation: typing;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: both;
+  }
+
+/* add cursor animation */
+
+@keyframes cursor {
+    0% { border-right-color: transparent}
+    50% {border-right-color: black;}
+    100%{border-right-color: transparent;}
+}
+
+  .anm-typing-w-cursor{
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 1.5s steps(30, end) forwards, cursor 1s infinite;
+    border-right: 2px solid ;
+    
+  }
+
+  @keyframes addPadding {
+    from{padding: 0;}
+    to{padding: 0.2vw 2vw;}
+  }
+  
+.add-padding{
+animation: addPadding 1.5s steps(30, end);
+animation-fill-mode: forwards;
+}
+
+/* erasing animation */
+@keyframes erase {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+.anm-erase {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+
+    animation-name: erase;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: both;
+}
+
+
+
+/***********    animation utilities    *******************   */
+/* activate animation */
+.animate{
+    animation-duration: 1s;
+}
+
+
+
+.animate--infinite{
+    animation-iteration-count: infinite;
+}
+.animate--faster{
+    animation-duration: 0.4s;
+}
+.animate--fast{
+    animation-duration: 0.7s;
+}
+.animate--normal {
+    animation-duration: 1s;
+}
+.animate--slow{
+    animation-duration: 1.5s;
+}
+.animate--slower{
+    animation-duration: 2s;
+}
+.animate--reverse{
+    animation-direction: reverse;
+}
+.animate--delay-half1s{
+    animation-delay: 0.5s;
+}
+.animate--delay1s{
+    animation-delay: 1s;
+}
+.animate--delay1halfs{
+    animation-delay: 1.5s;
+}
+.animate--delay2s{
+    animation-delay: 2s;
+}
+.animate--delay2halfs{
+    animation-delay: 2.5s;
+}
+.animate--delay3s{
+    animation-delay: 3s;
+}
+.animate--delay4s{
+    animation-delay: 4s;
+}
+.animate--delay5s{
+    animation-delay: 5s;
+}
+.animate--delay6s{
+    animation-delay: 6s;
+}
+.animate--delay7s{
+    animation-delay: 7s;
+}
+.animate--delay8s{
+    animation-delay: 8s;
+}
+.animate--delay9s{
+    animation-delay: 9s;
+}
+.animate--delay10s{
+    animation-delay: 10s;
+}
+
+.animate--fillBackwards{
+    animation-fill-mode: backwards;
+}
